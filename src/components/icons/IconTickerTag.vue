@@ -1,0 +1,8 @@
+<template>
+  <svg viewBox="0 0 20.2696 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+       width="20" height="16" aria-hidden="true">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5574 8L14.8998 0.684912L16.2696 4.05534e-07L20.2696 8L16.2696 16L14.8998 15.3151L18.5574 8Z" fill="#4B99F5"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.71228 8L5.36982 15.3151L4 16L0 8L4 0L5.36982 0.684912L1.71228 8Z" fill="#4B99F5"/>
+    <path d="M9.36981 10.3439V1.56766H10.9013V10.3439H9.36981ZM9.36981 14.6333V12.8027H10.9013V14.6333H9.36981Z" fill="#4B99F5"/>
+  </svg>
+</template>

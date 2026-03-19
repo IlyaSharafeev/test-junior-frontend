@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+// ─── Breakpoint helpers ───────────────────────────────────────────────────────
+@mixin desktop {
+  @media (min-width: $bp-desktop) { @content; }
+}
+
+@mixin mobile-only {
+  @media (max-width: #{$bp-desktop - 1px}) { @content; }
+}
+
+// ─── Typography shortcuts ─────────────────────────────────────────────────────
+@mixin roboto($size, $weight: 400, $lh: normal) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin roboto-slab($size, $weight: 700, $lh: normal) {
+  font-family: $font-slab;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+// ─── Truncate text ───────────────────────────────────────────────────────────
+@mixin clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ─── Hide scrollbar ──────────────────────────────────────────────────────────
+@mixin no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+// ─── Content container (matches Figma content area) ──────────────────────────
+@mixin content-container {
+  padding-left:  $content-padding-mobile;
+  padding-right: $content-padding-mobile;
+
+  @include desktop {
+    padding-left:  $content-padding-desktop;
+    padding-right: $content-padding-desktop;
+  }
+}
